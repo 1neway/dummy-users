@@ -11,6 +11,6 @@ class User < ActiveRecord::Base
     p @user.password_hash
 
     password_encrypted = BCrypt::Password.new(@user.password_hash)
-    p password_encrypted == password_input
+    password_encrypted == password_input
   end
 end
